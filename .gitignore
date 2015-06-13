@@ -6,4 +6,4 @@ bower_components
 
 *.psd
 *.pdf
-/build/*
+/app/*
