@@ -1,0 +1,75 @@
+<md-content id="about-content">
+<div ng-keep-scroll="service.scrollY">
+  <div class="heading" layout="row">
+    <div class="wrapper">
+      <h2>Introduction</h2>
+    </div>
+  </div>
+
+  <div class="wrapper">
+
+    <div layout="row" layout-wrap>
+      <div id="devinPic" flex="25">
+        <img src="../images/devin.jpg">
+      </div>
+      <div id="about-quote" class="md-padding" flex="75">
+        <p>I am a student and web developer. I am pursuing a degree in Interactive Arts and Technology from Simon Fraser University. I have a passion for combining beauty and function to create clean, inspiring, and responsive websites.</p>
+        <p>I built this portfolio web app using <strong>Angular</strong> and <strong>Angular Material</strong>.</p>
+      </div>
+    </div>
+  </div>
+  <div id="projects" class="heading" layout="row">
+    <div class="wrapper">
+      <h2>Projects</h2>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div layout="row" ng-controller="gridListDemoCtrl" id="projectList" layout-wrap>
+      <div layout="column" flex="25" class="project-container" ng-repeat="project in projects" >
+        <div angular-ripple ng-click="go(project.title);" id="{{project.id}}" class="project-tile md-whiteframe-z1">
+          <div>
+            <h3>{{project.title}}<br><span class="subtitle">{{project.subtitle}}</span></h3>
+            <h4></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</md-content>
+<!--
+<div style="height:800px;">
+  
+  
+<div id="projectList" ng-controller="gridListDemoCtrl as vm" flex class="gridListdemoDynamicTiles">
+  <md-grid-list
+        md-cols-sm="1" md-cols-md="2" md-cols-gt-md="4"
+        md-row-height-gt-md="1:1" md-row-height="4:3"
+        md-gutter="8px" md-gutter-gt-sm="4px" >
+    <md-grid-tile ng-repeat="tile in vm.tiles"
+                  md-rowspan="{{tile.span.row}}"
+                  md-colspan="{{tile.span.col}}"
+                  md-colspan-sm="1"
+                  
+                  ng-class="tile.background"
+                  
+                  ng-click="addClass(tile.index)"
+                  id="active{{tile.index}}">
+      <div class="projImg"></div>
+      <div class="projInfo">
+        <h2><strong>{{tile.title}}</strong><br>{{tile.subtitle}}</h2>
+
+        <p><strong>{{projectHeadings[0]}}</strong> - {{tile.role}}</p>
+        <p><strong>{{projectHeadings[1]}}</strong> - {{tile.overview}}</p>
+        <p><strong>{{projectHeadings[2]}}</strong> - {{tile.process}}</p>
+        <p><strong>{{projectHeadings[3]}}</strong> - {{tile.result}}</p>
+        
+      </div>
+      <md-button class="close" ng-click="closeTile(tile.index)"><i class="material-icons">close</i></md-button>
+      <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+</div>
+</div>
+-->
