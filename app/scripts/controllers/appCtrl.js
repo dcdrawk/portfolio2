@@ -8,7 +8,7 @@
  * Controller of the yoApp
  */
 angular.module('yoApp')
-  .controller('AppCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $mdUtil, $log, $location, $anchorScroll, $document) {
+  .controller('AppCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $mdUtil, $log, $location, $anchorScroll) {
 //  $scope.theBestVideo = 'sMKoNBRZM1M';
     $scope.awesome = true;
     /**

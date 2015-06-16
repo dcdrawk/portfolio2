@@ -161,7 +161,7 @@ angular
         $location.path(prevUrl);
     };
 
-})
+});
 
 ///**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //* Anchor Smooth Scroll - Smooth scroll to the given anchor on click
