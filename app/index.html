@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/animate.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="yoApp" layout="row" layout-fill role="main">
+  <body ng-app="yoApp" layout="row" layout-fill role="main" ng-init="fadeInBody()" ng-class="{'isLoaded': $root.isLoaded}">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -36,8 +36,13 @@
           <md-toolbar>
             <h1 class="md-toolbar-tools">Menu</h1>
           </md-toolbar>
-          <md-content layout-fill  ng-controller="LeftCtrl" class="md-padding toolbar-content">
-            <md-button class="md-primary" ng-click="go('/about')" >About</md-button>
+          <md-content layout-fill  ng-controller="LeftCtrl" class="toolbar-content">
+            <md-button class="md-primary" ng-click="scroll2('introduction')" >Introduction</md-button>
+<!--            <md-button class="md-primary" ng-click="scrollTo('projects')" >Projects</md-button>-->
+            <md-button class="md-primary" ng-click="scroll2('projects')" >Projects</md-button>
+            <md-button class="md-primary" ng-click="scroll2('websites')" >Websites</md-button>
+            <md-button class="md-primary" ng-click="scroll2('experience')" >Experience</md-button>
+            <md-button class="md-primary" ng-click="scroll2('contact')" >Contact</md-button>
             <p hide-md show-gt-md>
               This sidenav is locked open on your device. To go back to the default behavior,
               narrow your display.
@@ -134,6 +139,8 @@
     <script src="bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
     <script src="bower_components/angular-lazytube/angular-lazytube.js"></script>
     <script src="bower_components/angular-ripple/angular-ripple.js"></script>
+    <script src="bower_components/ngSmoothScroll/angular-smooth-scroll.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
