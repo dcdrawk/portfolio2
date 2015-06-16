@@ -1,6 +1,8 @@
 <md-content id="about-content">
 <div ng-keep-scroll="service.scrollY">
-  <div class="heading" layout="row">
+  
+  <!-- intro -->
+  <div id="introduction" class="heading" layout="row">
     <div class="wrapper">
       <h2>Introduction</h2>
     </div>
@@ -10,14 +12,22 @@
 
     <div layout="row" layout-wrap>
       <div id="devinPic" flex="25">
-        <img src="../images/devin.jpg">
+        <img class="md-whiteframe-z1" src="../images/devin.jpg">
       </div>
       <div id="about-quote" class="md-padding" flex="75">
         <p>I am a student and web developer. I am pursuing a degree in Interactive Arts and Technology from Simon Fraser University. I have a passion for combining beauty and function to create clean, inspiring, and responsive websites.</p>
         <p>I built this portfolio web app using <strong>Angular</strong> and <strong>Angular Material</strong>.</p>
+<!--        <p><a href="/#/#websites" du-smooth-scroll>test</a></p>-->
+<!--
+        <p><a href="" smooth-scroll target="contact" offset="30">tdasdaest</a></p>
+        <p ng-click="scroll2('projects')">test</p>
+-->
       </div>
     </div>
   </div>
+  <!-- /intro -->
+  
+  <!-- projects -->
   <div id="projects" class="heading" layout="row">
     <div class="wrapper">
       <h2>Projects</h2>
@@ -27,7 +37,7 @@
   <div class="wrapper">
     <div layout="row" ng-controller="gridListDemoCtrl" id="projectList" layout-wrap>
       <div layout="column" flex="25" class="project-container" ng-repeat="project in projects" >
-        <div angular-ripple ng-click="go(project.title);" id="{{project.id}}" class="project-tile md-whiteframe-z1">
+        <div angular-ripple ng-click="go(project.id);" id="{{project.id}}" class="project-tile md-whiteframe-z1">
           <div>
             <h3>{{project.title}}<br><span class="subtitle">{{project.subtitle}}</span></h3>
             <h4></h4>
@@ -36,40 +46,121 @@
       </div>
     </div>
   </div>
-</div>
-</md-content>
-<!--
-<div style="height:800px;">
+  <!-- /projects -->
   
-  
-<div id="projectList" ng-controller="gridListDemoCtrl as vm" flex class="gridListdemoDynamicTiles">
-  <md-grid-list
-        md-cols-sm="1" md-cols-md="2" md-cols-gt-md="4"
-        md-row-height-gt-md="1:1" md-row-height="4:3"
-        md-gutter="8px" md-gutter-gt-sm="4px" >
-    <md-grid-tile ng-repeat="tile in vm.tiles"
-                  md-rowspan="{{tile.span.row}}"
-                  md-colspan="{{tile.span.col}}"
-                  md-colspan-sm="1"
-                  
-                  ng-class="tile.background"
-                  
-                  ng-click="addClass(tile.index)"
-                  id="active{{tile.index}}">
-      <div class="projImg"></div>
-      <div class="projInfo">
-        <h2><strong>{{tile.title}}</strong><br>{{tile.subtitle}}</h2>
+  <!-- websites -->
+  <div id="websites" class="heading" layout="row">
+    <div class="wrapper"><a name="websites"></a>
+      <h2>Websites</h2>
+    </div>
+  </div>
 
-        <p><strong>{{projectHeadings[0]}}</strong> - {{tile.role}}</p>
-        <p><strong>{{projectHeadings[1]}}</strong> - {{tile.overview}}</p>
-        <p><strong>{{projectHeadings[2]}}</strong> - {{tile.process}}</p>
-        <p><strong>{{projectHeadings[3]}}</strong> - {{tile.result}}</p>
+  <div class="wrapper">
+    <div layout="row" ng-controller="gridListDemoCtrl" id="projectList" layout-wrap>
+      <div layout="column" flex="25" class="project-container" ng-repeat="project in websites" >
+        <div angular-ripple ng-click="go(project.id);" id="{{project.id}}" class="project-tile md-whiteframe-z1">
+          <div>
+            <h3>{{project.title}}<br><span class="subtitle">{{project.subtitle}}</span></h3>
+            <h4></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /websites -->
+  
+  <!-- experience -->
+  <div id="experience" class="heading" layout="row">
+    <div class="wrapper">
+      <h2>Experience</h2>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div layout="column" id="experienceInfo" layout-wrap>
+      <div class="job">
+        <h3>Junior Web Developer <span class="year">(2014-Present)</span></h3>
+        <h4>Website on Demand</h4>
+        <p>Responsible for the planning and development of the organization’s website, esebc.ca. Created sketches, prototypes, and wireframes to communicate my design vision. Developed a custom WordPress theme from scratch using PHP, HTML, CSS, and JavaScript. Performed Search Engine Optimization to improve search rank. Designed graphics and optimized them for the web.</p>
+      </div>
+      <div class="job">
+        <h3>Web Design & Marketing Coordinator <span class="year">(2014)</span></h3>
+        <h4>The Center for Epilepsy and Seizure Education BC</h4>
+        <p>Responsible for the planning and development of the organization’s website, esebc.ca. Created sketches, prototypes, and wireframes to communicate my design vision. Developed a custom WordPress theme from scratch using PHP, HTML, CSS, and JavaScript. Performed Search Engine Optimization to improve search rank. Designed graphics and optimized them for the web.</p>
+      </div>
+      <div class="job">
+        <h3>Web & Graphic Design Intern <span class="year">(2013)</span></h3>
+        <h4>Downtown Surrey Business Improvement Association</h4>
+        <p>Developed and maintained websites for the BIA, including surreymarathon.com, surreycitycentre.ca, surreyfest.com, and downtownsurreybia.com. Designed graphics for web and print materials (such as newspaper ads, logos, banners, posters, newsletters, and flyers) to promote events and campaigns.</p>
+      </div>
+      <div class="job">
+        <h3>Marketing & Communications Assistant <span class="year">(2012)</span></h3>
+        <h4>Simon Fraser University</h4>
+        <p>Responsible for creating promotional web and print material for Health and Counselling Services. This included a campaign to promote a student health survey as well as updating the HCS website to use a new content management system. I also created 1-page information sheets, posters, and web banners.</p>
+        </div>
+    </div>
+  </div>
+  <!-- /experience -->
+  
+  <!-- contact -->
+  <div id="contact" class="heading" layout="row">
+    <div class="wrapper">
+      <h2>Contact</h2>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div layout="row" id="contactInfo" layout-wrap>
+      <div flex="40">
+        <h3>Devin Cook</h3>
+        <h3>778-235-7456</h4>
+        <h3>Maple Ridge, British Columbia.</h3>
+        
+        <md-icon class="faceBook" md-svg-src="../images/icons/facebook-box.svg"
+                 aria-label="Insert Drive Icon">
+        </md-icon>
+        
+        <md-icon class="linkedIn" md-svg-src="../images/icons/linkedin-box.svg"
+                 aria-label="Insert Drive Icon">
+        </md-icon>
+        
+        <md-icon class="googlePlus" md-svg-src="../images/icons/google-plus-box.svg"
+                 aria-label="Insert Drive Icon">
+        </md-icon>
+        
         
       </div>
-      <md-button class="close" ng-click="closeTile(tile.index)"><i class="material-icons">close</i></md-button>
-      <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
-    </md-grid-tile>
-  </md-grid-list>
+      <div flex="60">
+        <form>
+        <!-- name -->
+        <md-input-container>
+          <label>Name</label>
+          <input ng-model="user.firstName">
+        </md-input-container>
+        <!-- email -->
+        <md-input-container>
+          <label>Email</label>
+          <input ng-model="user.email">
+        </md-input-container>
+        <!-- message -->
+        <md-input-container flex>
+          <label>Message</label>
+          <textarea ng-model="user.message" columns="1"></textarea>
+        </md-input-container>
+        <md-button class="md-raised md-primary">Send Message</md-button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- /contact -->
+  
+  <!-- footer -->
+  <div id="footer" layout="row">
+    <div class="wrapper">
+      <p>©2015 - Designed by Devin Cook</p>
+    </div>
+  </div>
+  <!-- /contact -->
+  
 </div>
-</div>
--->
+</md-content>

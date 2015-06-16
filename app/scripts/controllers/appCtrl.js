@@ -8,13 +8,17 @@
  * Controller of the yoApp
  */
 angular.module('yoApp')
-  .controller('AppCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $mdUtil, $log, $location) {
+  .controller('AppCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $mdUtil, $log, $location, $anchorScroll, $document) {
 //  $scope.theBestVideo = 'sMKoNBRZM1M';
     $scope.awesome = true;
     /**
      * Build handler to open/close a SideNav; when animation finishes
      * report completion in console
      */
+  $rootScope.isLoaded = true;
+    $scope.fadeInBody = function (){
+      $scope.isLoaded = true;
+    };
     function buildToggler(navID) {
       var debounceFn =  $mdUtil.debounce(function(){
             $mdSidenav(navID)
@@ -30,6 +34,21 @@ angular.module('yoApp')
     $scope.go = function ( path ) {
       $location.path( path );
       $mdSidenav('left').close();
+    };
+    $scope.scroll2 = function ( hash ) {
+//      console.log( hash );
+//     // $location.path( hash );
+//      var offset = 64; //pixels; adjust for floating menu, context etc
+//      var duration = 2000; //milliseconds
+//      var someElement = angular.element(document.getElementById(hash));
+//      $document.scrollToElement(someElement, offset, duration);
+      $anchorScroll(hash);
+//      $(window).scrollTo(0,1000);
+//      var offset = $('#projects').offset();
+//      console.log(offset);
+//      $("#main-content").animate({
+//          scrollTop: 200
+//      });
     };
   
     $rootScope.changeTitle = function ( title ) {
