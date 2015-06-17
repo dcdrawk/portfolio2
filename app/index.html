@@ -32,7 +32,8 @@
 
       <!-- SIDE NAV -->
       <section layout="row" flex>
-        <md-sidenav class="md-sidenav-left md-primary md-whiteframe-z1" md-component-id="left" md-is-locked-open="$mdMedia('gt-lg')">
+<!--         md-is-locked-open="$mdMedia('gt-lg')" -->
+        <md-sidenav class="md-sidenav-left md-primary md-whiteframe-z1" md-component-id="left">
           <md-toolbar>
             <h1 class="md-toolbar-tools">Menu</h1>
           </md-toolbar>
@@ -52,7 +53,7 @@
         <md-content flex id="main-content" >
           <md-toolbar class="md-whiteframe-z1">
           <div class="md-toolbar-tools">
-            <md-button id="menuBtn" ng-class="{ 'fade': $root.isProject}" class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()" hide-gt-lg>
+            <md-button id="menuBtn" ng-class="{ 'fade': $root.isProject}" class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()">
               <i class="material-icons">menu</i>
             </md-button>
             <md-button id="backBtn" class="md-icon-button" aria-label="Menu" ng-click="back()" ng-class="{'fade-in': $root.opened, 'fade': !$root.isProject}">
