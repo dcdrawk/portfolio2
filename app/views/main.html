@@ -11,11 +11,11 @@
   <div class="wrapper">
 
     <div layout="row" layout-wrap>
-      <div id="devinPic" flex="25">
+      <div id="devinPic" flex="25" flex-lg="30" flex-md="40" flex-sm="100">
         <img class="md-whiteframe-z1" src="../images/devin.jpg">
       </div>
-      <div id="about-quote" class="md-padding" flex="75">
-        <p>I am a student and web developer. I am pursuing a degree in Interactive Arts and Technology from Simon Fraser University. I have a passion for combining beauty and function to create clean, inspiring, and responsive websites.</p>
+      <div id="about-quote" class="md-padding" flex>
+        <p>I am a <strong>Web Developer</strong> and <strong>Interaction Design Specialist</strong>. I recently graduated from Simon Fraser University with a Bachlor's degree in Interactive Art and Technology. I have a passion for combining beauty and function to create clean, inspiring, and responsive websites.</p>
         <p>I built this portfolio web app using <strong>Angular</strong> and <strong>Angular Material</strong>.</p>
 <!--        <p><a href="/#/#websites" du-smooth-scroll>test</a></p>-->
 <!--
@@ -36,7 +36,7 @@
 
   <div class="wrapper">
     <div layout="row" ng-controller="gridListDemoCtrl" id="projectList" layout-wrap>
-      <div layout="column" flex="25" class="project-container" ng-repeat="project in projects" >
+      <div layout="column" flex="25" class="project-container" ng-repeat="project in projects" flex-lg="50" flex-md="50" flex-sm="100">
         <div angular-ripple ng-click="go(project.id);" id="{{project.id}}" class="project-tile md-whiteframe-z1">
           <div>
             <h3>{{project.title}}<br><span class="subtitle">{{project.subtitle}}</span></h3>
@@ -80,8 +80,8 @@
     <div layout="column" id="experienceInfo" layout-wrap>
       <div class="job">
         <h3>Junior Web Developer <span class="year">(2014-Present)</span></h3>
-        <h4>Website on Demand</h4>
-        <p>Responsible for the planning and development of the organization’s website, esebc.ca. Created sketches, prototypes, and wireframes to communicate my design vision. Developed a custom WordPress theme from scratch using PHP, HTML, CSS, and JavaScript. Performed Search Engine Optimization to improve search rank. Designed graphics and optimized them for the web.</p>
+        <h4>Website On-Demand</h4>
+        <p>Contract position. Responsible for developing websites, updating content, and designing graphics for 20+ clients. Tasks range from performing a complete site build to small updates and adjustments. I communicate with clients, as well as my supervisor, to make sure clients are happy with the work we do. Clients often comment on our level of professionalism and attention to detail.</p>
       </div>
       <div class="job">
         <h3>Web Design & Marketing Coordinator <span class="year">(2014)</span></h3>

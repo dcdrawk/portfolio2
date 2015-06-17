@@ -8,7 +8,7 @@
  * Controller of the yoApp
  */
 angular.module('yoApp')
-  .controller('AppCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $mdUtil, $log, $location, $anchorScroll) {
+  .controller('AppCtrl', function ($scope, $rootScope, $timeout, $mdSidenav, $mdUtil, $log, $location, $anchorScroll, $window) {
 //  $scope.theBestVideo = 'sMKoNBRZM1M';
     $scope.awesome = true;
     /**
@@ -50,9 +50,17 @@ angular.module('yoApp')
 //          scrollTop: 200
 //      });
     };
+    var testEle = document.getElementById('main-content');
+//    angular.element(testEle).bind("scroll", function(e) {
+//       console.log('scroll');
+//       console.log(e.pageYOffset);
+//       $scope.visible = false;
+//   });
+
+  
   
     $rootScope.changeTitle = function ( title ) {
-      $log.debug(title);
+      //$log.debug(title);
       if(title === 'none'){
 //        $rootScope.projectTitle = '';
 //        $rootScope.projectName = '';
@@ -63,7 +71,7 @@ angular.module('yoApp')
         $rootScope.showProjTitle = true;
       }
     };
-  
+    
 //  $scope.scrollPos = {}; // scroll position of each view
 //
 //  $(window).on('scroll', function() {

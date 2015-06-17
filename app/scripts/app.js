@@ -62,27 +62,27 @@ angular
       })
       .when('/DiceRoller', {
         templateUrl: 'views/projects/diceroller.html',
-        controller: 'scrollBinderCtrl'
+        controller: 'diceCtrl'
       })
       .when('/UFOria', {
         templateUrl: 'views/projects/uforia.html',
-        controller: 'scrollBinderCtrl'
+        controller: 'ufoCtrl'
       })
       .when('/Harvey', {
         templateUrl: 'views/projects/harvey.html',
-        controller: 'scrollBinderCtrl'
+        controller: 'harveyCtrl'
       })
       .when('/Kinect', {
         templateUrl: 'views/projects/kinect.html',
-        controller: 'scrollBinderCtrl'
+        controller: 'kinectCtrl'
       })
       .when('/QWERT', {
         templateUrl: 'views/projects/qwert.html',
-        controller: 'scrollBinderCtrl'
+        controller: 'qwertCtrl'
       })
       .when('/Sandwich', {
         templateUrl: 'views/projects/sandwich.html',
-        controller: 'scrollBinderCtrl'
+        controller: 'sandwhichCtrl'
 //      })
 //      .otherwise({
 //        redirectTo: '/'
@@ -147,6 +147,16 @@ angular
       //$location.hash($routeParams.scrollTo);
       $log.debug('SUCCESS!');
     });
+        var testEle = document.getElementById('main-content');
+
+//    function myMethod(){
+//      var main = document.getElementById('about-content');
+//      var ele = document.getElementById('websites');
+//      
+//      console.log(ele.offsetTop - main.scrollTop );
+//      $root.place = 'lol';
+//    }
+  
 })
 .run(function ($rootScope, $location) {
 
@@ -161,6 +171,23 @@ angular
         $location.path(prevUrl);
     };
 
+})
+.directive("scroll", function ($document) {
+  console.log('Scrolled1!!!');
+    return function(scope, element, attrs) {
+      console.log('Scrolled2!!!');
+        angular.element($document).bind("scroll", function() {
+          console.log('Scrolled3!!!');
+             if (this.pageYOffset >= 100) {
+                 scope.boolChangeClass = true;
+                 console.log('Scrolled below header.');
+             } else {
+                 scope.boolChangeClass = false;
+                 console.log('Header is in view.');
+             }
+            scope.$apply();
+        });
+    };
 });
 
 ///**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

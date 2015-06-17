@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/animate.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="yoApp" layout="row" layout-fill role="main" ng-init="fadeInBody()" ng-class="{'isLoaded': $root.isLoaded}">
+  <body ng-app="yoApp" layout="row" layout-fill role="main" ng-init="fadeInBody()" ng-class="{'isLoaded': $root.isLoaded}" >
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -32,7 +32,7 @@
 
       <!-- SIDE NAV -->
       <section layout="row" flex>
-        <md-sidenav class="md-sidenav-left md-primary md-whiteframe-z1" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-sidenav class="md-sidenav-left md-primary md-whiteframe-z1" md-component-id="left" md-is-locked-open="$mdMedia('gt-lg')">
           <md-toolbar>
             <h1 class="md-toolbar-tools">Menu</h1>
           </md-toolbar>
@@ -43,27 +43,23 @@
             <md-button class="md-primary" ng-click="scroll2('websites')" >Websites</md-button>
             <md-button class="md-primary" ng-click="scroll2('experience')" >Experience</md-button>
             <md-button class="md-primary" ng-click="scroll2('contact')" >Contact</md-button>
-            <p hide-md show-gt-md>
-              This sidenav is locked open on your device. To go back to the default behavior,
-              narrow your display.
-            </p>
             <md-button ng-click="close()" class="md-primary" hide-gt-md>
               Close Sidenav Left
             </md-button>
           </md-content>
         </md-sidenav>
         
-        <md-content flex id="main-content">
+        <md-content flex id="main-content" >
           <md-toolbar class="md-whiteframe-z1">
           <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()" hide-gt-md>
+            <md-button id="menuBtn" ng-class="{ 'fade': $root.isProject}" class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()" hide-gt-lg>
               <i class="material-icons">menu</i>
             </md-button>
-            <h1 id="top-title">
-              <md-button id="backBtn" class="md-icon-button" aria-label="Menu" ng-click="back()" ng-class="{'showTitle': $root.showProjTitle, 'hideTitle': !$root.showProjTitle}">
+            <md-button id="backBtn" class="md-icon-button" aria-label="Menu" ng-click="back()" ng-class="{'fade-in': $root.opened, 'fade': !$root.isProject}">
               <i class="material-icons">arrow_back</i>
-              </md-button>
-              <span ng-class="{'slideTitle': $root.isProject}">{{$root.place}}<span ng-class="{'showTitle': $root.showProjTitle, 'hideTitle': !$root.showProjTitle}">{{$root.projectTitle}}</span></span>
+            </md-button>
+            <h1 id="top-title">              
+              <span>Portfolio<span ng-class="{'showTitle': $root.showProjTitle, 'hideTitle': !$root.showProjTitle}">{{$root.projectTitle}}</span></span>
             </h1>
 
 <!--
@@ -74,8 +70,8 @@
           </div>
         </md-toolbar>
           
-          <div id="doc-content" layout="column" layout-fill layout-align="center">
-            <div id="view-content" ng-view  class="view-animate" ng-class="{'MAIN': !$root.isProject, 'ISPROJECT': $root.isProject, 'md-whiteframe-z2': $root.isProject }"></div>
+          <div id="doc-content" layout="column" layout-fill layout-align="center" scroll>
+            <div id="view-content" ng-view  class="view-animate" ng-class="{'MAIN': !$root.isProject, 'ISPROJECT': $root.isProject, 'md-whiteframe-z2': $root.isProject }" scroll></div>
 
           </div>
         </md-content>
@@ -152,6 +148,8 @@
     <script src="scripts/controllers/projects.js"></script>
     <script src="scripts/controllers/grid.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
+    
+    <script src="scripts/custom.js"></script>
     <!-- endbuild -->
   </body>
 </html>

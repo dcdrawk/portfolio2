@@ -25,8 +25,21 @@ angular
     test.scrollTop = $rootScope.aboutTop;
   }, 0);
   
+  $timeout(function() {
+     $rootScope.opened = false;
+  }, 1000);
   
   console.log('ABOUT TOP = ' + $rootScope.aboutTop);
+//  $rootScope.myMethod = function(){
+//      var main = document.getElementById('about-content');
+//      var ele = document.getElementById('websites');
+//      
+//      console.log(ele.offsetTop - main.scrollTop );
+//      $rootScope.place = 'lol';
+//    }
+//  $scope.myMethod = function(){
+//    console.log('testing scroll');
+//  }
   //$rootScope.WUT();
   
 //  var degred = $rootScope.$on('$locationChangeSuccess', function(){
@@ -140,7 +153,7 @@ angular
         subtitle: 'Immersive 3D game world'
       },{
         id: 'Harvey',
-        title: 'Harvey the Hamster',
+        title: 'Harvey',
         subtitle: 'Green Screen Video'
       },{
         id: 'Kinect',
