@@ -15,7 +15,7 @@
         <img class="md-whiteframe-z1" src="../images/devin.jpg">
       </div>
       <div id="about-quote" class="md-padding" flex>
-        <p>I am a <strong>Web Developer</strong> and <strong>Interaction Design Specialist</strong>. I recently graduated from Simon Fraser University with a Bachlor's degree in Interactive Art and Technology. I have a passion for combining beauty and function to create clean, inspiring, and responsive websites.</p>
+        <p>I am a <strong>Web Developer</strong> and <strong>Interaction Design Specialist</strong>. Recently graduated from Simon Fraser University with a Bachlor's degree in Interactive Art and Technology. I have a passion for combining beauty and function to create clean, inspiring, and responsive websites.</p>
         <p>I built this portfolio web app using <strong>Angular</strong> and <strong>Angular Material</strong>.</p>
 <!--        <p><a href="/#/#websites" du-smooth-scroll>test</a></p>-->
 <!--
@@ -56,7 +56,7 @@
   </div>
 
   <div class="wrapper">
-    <div layout="row" ng-controller="gridListDemoCtrl" id="projectList" layout-wrap>
+    <div layout="row" ng-controller="gridListDemoCtrl" id="websiteList" layout-wrap>
       <div layout="column" flex="25" class="project-container" ng-repeat="project in websites" >
         <div angular-ripple ng-click="go(project.id);" id="{{project.id}}" class="project-tile md-whiteframe-z1">
           <div>
@@ -66,6 +66,7 @@
         </div>
       </div>
     </div>
+    <h3 class="comingSoon">More to come soon...</h3>
   </div>
   <!-- /websites -->
   
@@ -111,43 +112,48 @@
 
   <div class="wrapper">
     <div layout="row" id="contactInfo" layout-wrap>
-      <div flex="40">
+      <div id="myInfo" flex="40" flex-md="50" flex-sm="100">
         <h3>Devin Cook</h3>
+        <h3><a href="mailto:devin@thewebdev.ca">devin@thewebdev.ca</a></h3>
         <h3>778-235-7456</h4>
         <h3>Maple Ridge, British Columbia.</h3>
         
+        <a class="icon-link" href="https://www.facebook.com/dev.cook.7" target="_blank">
         <md-icon class="faceBook" md-svg-src="../images/icons/facebook-box.svg"
                  aria-label="Insert Drive Icon">
         </md-icon>
-        
+        </a>
+        <a class="icon-link" href="https://ca.linkedin.com/in/thewebdev" target="_blank">
         <md-icon class="linkedIn" md-svg-src="../images/icons/linkedin-box.svg"
                  aria-label="Insert Drive Icon">
         </md-icon>
-        
+        </a>
+        <a class="icon-link" href="#" target="_blank">
         <md-icon class="googlePlus" md-svg-src="../images/icons/google-plus-box.svg"
                  aria-label="Insert Drive Icon">
         </md-icon>
-        
+        </a>
         
       </div>
-      <div flex="60">
+      <div flex="60" flex-md="50" flex-sm="100">
+        <h4>Leave a message:</h4>
         <form>
         <!-- name -->
         <md-input-container>
           <label>Name</label>
-          <input ng-model="user.firstName">
+          <input ng-blur="" id="name">
         </md-input-container>
         <!-- email -->
         <md-input-container>
           <label>Email</label>
-          <input ng-model="user.email">
+          <input ng-blur="" id="email">
         </md-input-container>
         <!-- message -->
         <md-input-container flex>
           <label>Message</label>
-          <textarea ng-model="user.message" columns="1"></textarea>
+          <textarea ng-blur="" id="msg" columns="1"></textarea>
         </md-input-container>
-        <md-button class="md-raised md-primary">Send Message</md-button>
+        <md-button id="submit" class="md-raised md-primary" ng-submit="">Send Message</md-button>
         </form>
       </div>
     </div>

@@ -53,12 +53,14 @@
         <md-content flex id="main-content" >
           <md-toolbar class="md-whiteframe-z1">
           <div class="md-toolbar-tools">
-            <md-button id="menuBtn" ng-class="{ 'fade': $root.isProject}" class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()">
-              <i class="material-icons">menu</i>
-            </md-button>
-            <md-button id="backBtn" class="md-icon-button" aria-label="Menu" ng-click="back()" ng-class="{'fade-in': $root.opened, 'fade': !$root.isProject}">
-              <i class="material-icons">arrow_back</i>
-            </md-button>
+            <div id="buttonHolder">
+              <md-button id="menuBtn" ng-class="{ 'fade': $root.isProject}" class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()">
+                <i class="material-icons">menu</i>
+              </md-button>
+              <md-button id="backBtn" class="md-icon-button" aria-label="Menu" ng-click="back()" ng-class="{'fade-in': $root.opened, 'fade': !$root.isProject}">
+                <i class="material-icons">arrow_back</i>
+              </md-button>
+            </div>
             <h1 id="top-title">              
               <span>Portfolio<span ng-class="{'showTitle': $root.showProjTitle, 'hideTitle': !$root.showProjTitle}">{{$root.projectTitle}}</span></span>
             </h1>

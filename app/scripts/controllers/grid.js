@@ -144,13 +144,17 @@ angular
         title: 'Scrollbinder',
         subtitle: 'DnD Character Planner'
       },{
-        id: 'DiceRoller',
-        title: 'DiceRoller',
-        subtitle: 'Mobile ThreeJS WebApp'
-      },{
         id: 'UFOria',
         title: 'UFOria',
         subtitle: 'Immersive 3D game world'
+      },{
+        id: 'Sandwich',
+        title: 'The Sandwich',
+        subtitle: '3D Animated Short'
+      },{
+        id: 'DiceRoller',
+        title: 'DiceRoller',
+        subtitle: 'Mobile ThreeJS WebApp'
       },{
         id: 'Harvey',
         title: 'Harvey',
@@ -159,44 +163,25 @@ angular
         id: 'Kinect',
         title: 'Kinect Remote',
         subtitle: 'Gesture Controls'
-      },{
-        id: 'QWERT',
-        title: "QWERT's QUEST",
-        subtitle: '3D Unity Game'
-      },{
-        id: 'Sandwich',
-        title: 'The Sandwich',
-        subtitle: '3D Animated Short'
-      }];
+      }
+//        id: 'QWERT',
+//        title: "QWERT's QUEST",
+//        subtitle: '3D Unity Game'
+//      }
+                      ];
       
       $scope.websites = [{         
         id: 'BCBT',
         title: 'BC Building Trades',
-        subtitle: 'Building and Trades Union Website'
+        subtitle: 'Building and Trades Union'
       },{
         id: 'ESEBC',
         title: 'esebc.ca',
-        subtitle: 'Epilepy Education Website'
+        subtitle: 'Epilepy Education'
       },{
         id: 'SCC',
         title: 'Surrey City Center',
-        subtitle: 'Realestate News Website'
-      },{
-        id: 'UFOria',
-        title: 'UFOria',
-        subtitle: 'Immersive 3D game world'
-      },{
-        id: 'Harvey',
-        title: 'Harvey the Hamster',
-        subtitle: 'Green Screen Video'
-      },{
-        id: 'Kinect',
-        title: 'Kinect Remote',
-        subtitle: 'Gesture Controls'
-      },{
-        id: 'QWERT',
-        title: "QWERT's QUEST",
-        subtitle: '3D Unity Game'
+        subtitle: 'Realestate News'
       }];
   
 //    function buildGridModel(tileTmpl){

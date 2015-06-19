@@ -112,7 +112,50 @@ angular.module('yoApp')
       $timeout(function() {
         $scope.opening = false;
         $scope.opened = true;
+        $rootScope.opened = true;
       }, 1000);
-    });
+    })
+  .controller('sccCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+      $rootScope.isProject = true; 
+      $rootScope.projectTitle = ' - SCC';
+      $rootScope.projectName = 'SCC';
+      $rootScope.showProjTitle = true;  
+      $rootScope.opened = false;
+      $scope.opened = false;
+      $scope.opening = true;  
+      $timeout(function() {
+        $scope.opening = false;
+        $scope.opened = true;
+        $rootScope.opened = true;
+      }, 1000);
+  })
+  .controller('esebcCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+      $rootScope.isProject = true; 
+      $rootScope.projectTitle = ' - ESEBC';
+      $rootScope.projectName = 'ESEBC';
+      $rootScope.showProjTitle = true;  
+      $rootScope.opened = false;
+      $scope.opened = false;
+      $scope.opening = true;  
+      $timeout(function() {
+        $scope.opening = false;
+        $scope.opened = true;
+        $rootScope.opened = true;
+      }, 1000);
+  })
+  .controller('bcbtCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+      $rootScope.isProject = true; 
+      $rootScope.projectTitle = ' - BCBT';
+      $rootScope.projectName = 'BCBT';
+      $rootScope.showProjTitle = true;  
+      $rootScope.opened = false;
+      $scope.opened = false;
+      $scope.opening = true;  
+      $timeout(function() {
+        $scope.opening = false;
+        $scope.opened = true;
+        $rootScope.opened = true;
+      }, 1000);
+  });
   
   

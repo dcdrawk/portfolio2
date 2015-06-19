@@ -83,9 +83,21 @@ angular
       .when('/Sandwich', {
         templateUrl: 'views/projects/sandwich.html',
         controller: 'sandwhichCtrl'
-//      })
-//      .otherwise({
-//        redirectTo: '/'
+      })
+      .when('/BCBT', {
+        templateUrl: 'views/websites/bcbt.html',
+        controller: 'bcbtCtrl'
+      })
+      .when('/ESEBC', {
+        templateUrl: 'views/websites/esebc.html',
+        controller: 'esebcCtrl'
+      })
+      .when('/SCC', {
+        templateUrl: 'views/websites/scc.html',
+        controller: 'sccCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
       });
 //  })
 //  .directive("keepScrollPos", function($route, $window, $timeout, $location, $anchorScroll, $rootScope, $log) {
