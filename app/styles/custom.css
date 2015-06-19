@@ -545,6 +545,7 @@ a.md-button.md-default-theme.md-primary.md-raised:hover{
   border:5px solid #FFC107;
   width:100%;
   height: 100%;
+  transition: opacity ease-in 1s;
 }
 #about-quote{
   margin:auto 0;
@@ -632,5 +633,9 @@ a.md-button.md-default-theme.md-primary.md-raised:hover{
   }
   .project-tile h3{
     margin: 75px 0 0 0;
+  }
+  .projInfo .md-button, .projInfo span{
+    width:100%!important;
+    text-align: center!important;
   }
 }
