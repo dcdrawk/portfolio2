@@ -1,36 +1,11 @@
-<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title>Devin Cook - Portfolio</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.4f4ca2bd.css"> <link rel="stylesheet" href="styles/main.5afcbd44.css">  <body ng-app="yoApp" layout="row" layout-fill role="main" ng-init="fadeInBody()" ng-class="{'isLoaded': $root.isLoaded}"> <!--[if lt IE 7]>
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title>Devin Cook - Portfolio</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.81800a1a.css"> <link rel="stylesheet" href="styles/main.cea4342a.css">  <body ng-app="yoApp" layout="row" layout-fill role="main" ng-init="fadeInBody()" ng-class="{'isLoaded': $root.isLoaded}"> <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> <!-- Add your site or application content here --> <!--  --> <!-- TOOLBAR --> <div ng-controller="AppCtrl" layout="column" layout-fill> <!-- SIDE NAV --> <section layout="row" flex> <!--         md-is-locked-open="$mdMedia('gt-lg')" --> <md-sidenav class="md-sidenav-left md-primary md-whiteframe-z1" md-component-id="left"> <md-toolbar> <h1 class="md-toolbar-tools">Menu</h1> </md-toolbar> <md-content layout-fill ng-controller="LeftCtrl" class="toolbar-content"> <md-button class="md-primary" ng-click="scroll2('introduction')">Introduction</md-button> <!--            <md-button class="md-primary" ng-click="scrollTo('projects')" >Projects</md-button>--> <md-button class="md-primary" ng-click="scroll2('projects')">Projects</md-button> <md-button class="md-primary" ng-click="scroll2('websites')">Websites</md-button> <md-button class="md-primary" ng-click="scroll2('experience')">Experience</md-button> <md-button class="md-primary" ng-click="scroll2('contact')">Contact</md-button> <md-button ng-click="close()" class="md-primary" hide-gt-md> Close Sidenav Left </md-button> </md-content> </md-sidenav> <md-content flex id="main-content"> <md-toolbar class="md-whiteframe-z1"> <div class="md-toolbar-tools"> <div id="buttonHolder"> <md-button id="menuBtn" ng-class="{ 'fade': $root.isProject}" class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()"> <i class="material-icons">menu</i> </md-button> <md-button id="backBtn" class="md-icon-button" aria-label="Menu" ng-click="back()" ng-class="{'fade-in': $root.opened, 'fade': !$root.isProject}"> <i class="material-icons">arrow_back</i> </md-button> </div> <h1 id="top-title"> <span>Portfolio<span ng-class="{'showTitle': $root.showProjTitle, 'hideTitle': !$root.showProjTitle}">{{$root.projectTitle}}</span></span> </h1> <!--
-            <md-button class="md-icon-button" aria-label="More" hide-gt-md>
-              <i class="material-icons">more_vert</i>
-            </md-button>
---> </div> </md-toolbar> <div id="doc-content" layout="column" layout-fill layout-align="center" scroll> <div id="view-content" ng-view class="view-animate" ng-class="{'MAIN': !$root.isProject, 'ISPROJECT': $root.isProject, 'md-whiteframe-z2': $root.isProject }" scroll></div> </div> </md-content> </section> </div> <!-- /SIDE NAV --> <!--
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">yo</h3>
-      </div>
+    <![endif]--> <!-- Add your site or application content here --> <!--  --> <!-- TOOLBAR --> <div ng-controller="AppCtrl" layout="column" layout-fill> <section layout="row" flex> <!-- SIDE NAV --> <md-sidenav class="md-sidenav-left md-primary md-whiteframe-z1" md-component-id="left"> <md-toolbar> <h1 class="md-toolbar-tools">Menu</h1> </md-toolbar> <md-content layout-fill ng-controller="LeftCtrl" class="toolbar-content"> <md-button class="md-primary" ng-click="scroll2('introduction')">Introduction</md-button> <!--            <md-button class="md-primary" ng-click="scrollTo('projects')" >Projects</md-button>--> <md-button class="md-primary" ng-click="scroll2('projects')">Projects</md-button> <md-button class="md-primary" ng-click="scroll2('websites')">Websites</md-button> <md-button class="md-primary" ng-click="scroll2('experience')">Experience</md-button> <md-button class="md-primary" ng-click="scroll2('contact')">Contact</md-button> <md-button ng-click="close()" class="md-primary" hide-gt-md> Close Sidenav Left </md-button> </md-content> </md-sidenav> <!-- /SIDE NAV --> <md-content flex id="main-content"> <md-toolbar class="md-whiteframe-z1"> <div class="md-toolbar-tools"> <div id="buttonHolder"> <md-button id="menuBtn" ng-class="{ 'fade': $root.isProject}" class="md-icon-button" aria-label="Menu" ng-click="toggleLeft()"> <i class="material-icons">menu</i> </md-button> <md-button id="backBtn" class="md-icon-button" aria-label="Menu" ng-click="back()" ng-class="{'fade-in': $root.opened, 'fade': !$root.isProject}"> <i class="material-icons">arrow_back</i> </md-button> </div> <h1 id="top-title"> <span>Portfolio<span ng-class="{'showTitle': $root.showProjTitle, 'hideTitle': !$root.showProjTitle}">{{$root.projectTitle}}</span></span> </h1> </div> </md-toolbar> <div id="doc-content" layout="column" layout-fill layout-align="center" scroll> <div id="view-content" ng-view class="view-animate" ng-class="{'MAIN': !$root.isProject, 'ISPROJECT': $root.isProject, 'md-whiteframe-z2': $root.isProject }" scroll></div> </div> </md-content> </section> </div> <!-- Google Analytics --> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      <div ng-view=""></div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
---> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <!--
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
---> <!--[if lt IE 9]>
-    <script src="scripts/oldieshim.9ea1d182.js"></script>
-    <![endif]--> <script src="scripts/vendor.b0337ad0.js"></script> <script src="scripts/scripts.b483227f.js"></script>  
+      ga('create', 'UA-55235200-1', 'auto');
+      //ga('send', 'pageview');</script> <!--[if lt IE 9]>
+    <script src="scripts/oldieshim.6e10a036.js"></script>
+    <![endif]--> <script src="scripts/vendor.e163b163.js"></script> <script src="scripts/scripts.242a528a.js"></script>  

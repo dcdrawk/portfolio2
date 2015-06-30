@@ -12,10 +12,24 @@ angular.module('yoApp')
     $scope.awesomeThings = [];
     $rootScope.isProject = true;
   })
-  .controller('scrollBinderCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+  .controller('scrollBinderCtrl', function ($scope, $rootScope, $timeout) {
     $rootScope.isProject = true;
     $rootScope.projectTitle = ' - Scrollbinder';
     $rootScope.projectName = 'Scrollbinder';
+    $rootScope.showProjTitle = true;
+    $rootScope.opened = false;
+    $scope.opened = false;
+    $scope.opening = true;
+    $timeout(function() {
+      $scope.opening = false;
+      $scope.opened = true;
+      $rootScope.opened = true;
+    }, 1000);    
+  })
+  .controller('diceCtrl', function ($scope, $rootScope, $timeout) {
+    $rootScope.isProject = true; 
+    $rootScope.projectTitle = ' - DiceRoller';
+    $rootScope.projectName = 'DiceRoller';
     $rootScope.showProjTitle = true;
     $rootScope.opened = false;
     $scope.opened = false;
@@ -25,28 +39,8 @@ angular.module('yoApp')
       $scope.opened = true;
       $rootScope.opened = true;
     }, 1000);
-  
-//    $scope.testFalse = function(){
-//      $rootScope.isProject = false;
-//      $scope.test = false;
-//    };
-    
   })
-  .controller('diceCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
-      $rootScope.isProject = true; 
-      $rootScope.projectTitle = ' - DiceRoller';
-      $rootScope.projectName = 'DiceRoller';
-      $rootScope.showProjTitle = true;
-      $rootScope.opened = false;
-      $scope.opened = false;
-      $scope.opening = true;  
-      $timeout(function() {
-        $scope.opening = false;
-        $scope.opened = true;
-        $rootScope.opened = true;
-      }, 1000);
-  })
-  .controller('ufoCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+  .controller('ufoCtrl', function ($scope, $rootScope, $timeout) {
       $rootScope.isProject = true; 
       $rootScope.projectTitle = ' - UFOria';
       $rootScope.projectName = 'UFOria';
@@ -59,7 +53,7 @@ angular.module('yoApp')
         $rootScope.opened = true;
       }, 1000);
   })
-  .controller('harveyCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+  .controller('harveyCtrl', function ($scope, $rootScope, $timeout) {
       $rootScope.isProject = true; 
       $rootScope.projectTitle = ' - Harvey';
       $rootScope.projectName = 'Harvey';
@@ -73,7 +67,7 @@ angular.module('yoApp')
         $rootScope.opened = true;
       }, 1000);
   })
-  .controller('kinectCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+  .controller('kinectCtrl', function ($scope, $rootScope, $timeout) {
       $rootScope.isProject = true; 
       $rootScope.projectTitle = ' - Kinect Remote';
       $rootScope.projectName = 'Kinect Remote';
@@ -87,7 +81,7 @@ angular.module('yoApp')
         $rootScope.opened = true;
       }, 1000);
   })
-  .controller('qwertCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+  .controller('qwertCtrl', function ($scope, $rootScope, $timeout) {
       $rootScope.isProject = true; 
       $rootScope.projectTitle = " - QWERT's Quest";
       $rootScope.projectName = 'QWERT';
@@ -101,7 +95,7 @@ angular.module('yoApp')
         $rootScope.opened = true;
       }, 1000);
   })
-  .controller('sandwhichCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+  .controller('sandwhichCtrl', function ($scope, $rootScope, $timeout) {
       $rootScope.isProject = true; 
       $rootScope.projectTitle = ' - The Sandwhich';
       $rootScope.projectName = 'DiceRoller';
@@ -115,7 +109,7 @@ angular.module('yoApp')
         $rootScope.opened = true;
       }, 1000);
     })
-  .controller('sccCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+  .controller('sccCtrl', function ($scope, $rootScope, $timeout) {
       $rootScope.isProject = true; 
       $rootScope.projectTitle = ' - SCC';
       $rootScope.projectName = 'SCC';
@@ -129,7 +123,7 @@ angular.module('yoApp')
         $rootScope.opened = true;
       }, 1000);
   })
-  .controller('esebcCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+  .controller('esebcCtrl', function ($scope, $rootScope, $timeout) {
       $rootScope.isProject = true; 
       $rootScope.projectTitle = ' - ESEBC';
       $rootScope.projectName = 'ESEBC';
@@ -143,7 +137,7 @@ angular.module('yoApp')
         $rootScope.opened = true;
       }, 1000);
   })
-  .controller('bcbtCtrl', function ($scope, $rootScope, $window, $log, $timeout) {
+  .controller('bcbtCtrl', function ($scope, $rootScope, $timeout) {
       $rootScope.isProject = true; 
       $rootScope.projectTitle = ' - BCBT';
       $rootScope.projectName = 'BCBT';

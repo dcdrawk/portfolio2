@@ -43,12 +43,10 @@ height:100%;
 /*  bottom:0;*/
 /*  padding:16px;*/
 }
-/*
 .view-animate.ng-leave {
   -webkit-transition:all  cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.5s, opacity cubic-bezier(0.55, 0.055, 0.675, 0.19) .5s!important;
-  transition:all  cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.5s, opacity cubic-bezier(0.55, 0.055, 0.675, 0.19) .5s!important;
+  transition:all cubic-bezier(0.645, 0.045, 0.355, 1) 1.5s, opacity cubic-bezier(0.645, 0.045, 0.355, 1) .5s!important;
 }
-*/
 .view-animate.ng-enter {
   left:100%;
 }

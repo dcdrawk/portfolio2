@@ -9,9 +9,7 @@
  */
 angular.module('yoApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.contact.name = '';
+    $scope.contact.email = '';
+    $scope.contact.msg = '';
   });

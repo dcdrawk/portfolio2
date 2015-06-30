@@ -1,8 +1,9 @@
 'use strict';
-
+/* jshint ignore:start */
 $( document ).ready(function() {
+
+  //my method for sending emails from the angular form
   function myMethod(){
-    console.log('test!');
     var data = {
       name: $("#name").val(),
       email: $("#email").val(),
@@ -13,18 +14,27 @@ $( document ).ready(function() {
         url: "email.php",
         data: data,
         success: function(){
-            $('.success').fadeIn(1000);
         }
     });
   }
   
-  setTimeout(function(){ 
+  //function for showing the 'message successful' button
+  setTimeout(function(){
     var subBtn = document.getElementById('submit');
-    console.log(subBtn);
+    var successBtn = document.getElementById('success');
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var msg = document.getElementById('msg');
+    
     $('#submit').click(function(){
-      console.log('click!');
+      successBtn.style.display = 'inline-block';
+      subBtn.style.display = 'none';
+      name.disabled = true;
+      email.disabled = true;
+      msg.disabled = true;
       myMethod();
     });
-  }, 1000);
+  }, 100);
   
 });
+/* jshint ignore:end */

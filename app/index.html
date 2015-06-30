@@ -30,9 +30,9 @@
     <div ng-controller="AppCtrl" layout="column" layout-fill>
         
 
-      <!-- SIDE NAV -->
       <section layout="row" flex>
-<!--         md-is-locked-open="$mdMedia('gt-lg')" -->
+      
+        <!-- SIDE NAV -->
         <md-sidenav class="md-sidenav-left md-primary md-whiteframe-z1" md-component-id="left">
           <md-toolbar>
             <h1 class="md-toolbar-tools">Menu</h1>
@@ -49,6 +49,7 @@
             </md-button>
           </md-content>
         </md-sidenav>
+        <!-- /SIDE NAV -->
         
         <md-content flex id="main-content" >
           <md-toolbar class="md-whiteframe-z1">
@@ -64,57 +65,26 @@
             <h1 id="top-title">              
               <span>Portfolio<span ng-class="{'showTitle': $root.showProjTitle, 'hideTitle': !$root.showProjTitle}">{{$root.projectTitle}}</span></span>
             </h1>
-
-<!--
-            <md-button class="md-icon-button" aria-label="More" hide-gt-md>
-              <i class="material-icons">more_vert</i>
-            </md-button>
--->
           </div>
-        </md-toolbar>
-          
+        </md-toolbar>          
           <div id="doc-content" layout="column" layout-fill layout-align="center" scroll>
             <div id="view-content" ng-view  class="view-animate" ng-class="{'MAIN': !$root.isProject, 'ISPROJECT': $root.isProject, 'md-whiteframe-z2': $root.isProject }" scroll></div>
-
           </div>
         </md-content>
-      </section>
-      
-    </div>
-      <!-- /SIDE NAV -->
+      </section>      
+    </div>    
     
-<!--
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">yo</h3>
-      </div>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      <div ng-view=""></div>
+      ga('create', 'UA-55235200-1', 'auto');
+      //ga('send', 'pageview');
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
--->
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<!--
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
     </script>
--->
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -140,6 +110,29 @@
     <script src="bower_components/angular-ripple/angular-ripple.js"></script>
     <script src="bower_components/ngSmoothScroll/angular-smooth-scroll.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
+    <script src="bower_components/SHA-1/sha1.js"></script>
+    <script src="bower_components/angulartics/src/angulartics.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-adobe.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-chartbeat.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-clicky.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-cnzz.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-flurry.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-ga-cordova.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-ga.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-gtm.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-kissmetrics.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-mixpanel.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-piwik.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-scroll.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-segmentio.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-splunk.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-woopra.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-marketo.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-intercom.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-inspectlet.js"></script>
+    <script src="bower_components/angulartics/src/angulartics-newrelic-insights.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

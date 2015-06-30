@@ -1,10 +1,10 @@
 <md-content id="about-content">
-<div ng-keep-scroll="service.scrollY">
+<div id="scrollPos" ng-keep-scroll="service.scrollY">
   
   <!-- intro -->
   <div id="introduction" class="heading" layout="row">
     <div class="wrapper">
-      <h2>Introduction</h2>
+      <h2>Devin Cook</h2>
     </div>
   </div>
 
@@ -15,13 +15,10 @@
         <img class="md-whiteframe-z1" src="images/devin.jpg">
       </div>
       <div id="about-quote" class="md-padding" flex>
+        <h3></h3>
         <p>I am a <strong>Web Developer</strong> and <strong>Interaction Design Specialist</strong>. Recently graduated from Simon Fraser University with a Bachlor's degree in Interactive Art and Technology. I have a passion for combining beauty and function to create clean, inspiring, and responsive websites.</p>
         <p>I built this portfolio web app using <strong>Angular</strong> and <strong>Angular Material</strong>.</p>
-<!--        <p><a href="/#/#websites" du-smooth-scroll>test</a></p>-->
-<!--
-        <p><a href="" smooth-scroll target="contact" offset="30">tdasdaest</a></p>
-        <p ng-click="scroll2('projects')">test</p>
--->
+
       </div>
     </div>
   </div>
@@ -33,7 +30,7 @@
       <h2>Projects</h2>
     </div>
   </div>
-
+  
   <div class="wrapper">
     <div layout="row" ng-controller="gridListDemoCtrl" id="projectList" layout-wrap>
       <div layout="column" flex="25" class="project-container" ng-repeat="project in projects" flex-lg="50" flex-md="50" flex-sm="100">
@@ -133,28 +130,44 @@
                  aria-label="Insert Drive Icon">
         </md-icon>
         </a>
+        <a class="icon-link" href="http://github.com/dcdrawk/" target="_blank">
+        <md-icon class="gitHub" md-svg-src="images/icons/github-box.svg"
+                 aria-label="Insert Drive Icon">
+        </md-icon>
+        </a>
         
       </div>
       <div flex="60" flex-md="50" flex-sm="100">
         <h4>Leave a message:</h4>
-        <form>
+        <form name="contactForm" role="form">
         <!-- name -->
         <md-input-container>
           <label>Name</label>
-          <input ng-blur="" id="name">
+          <input ng-blur="goBottom()" ng-keypress="goBottom()" type="text" name="name" id="name" ng-model="contact.name" autocomplete="off" required>
+          <div ng-messages="contactForm.name.$error" ng-if='contactForm.name.$dirty' >
+            <div ng-message="required">This is required.</div>
+          </div>
         </md-input-container>
         <!-- email -->
         <md-input-container>
           <label>Email</label>
-          <input ng-blur="" id="email">
+          <input ng-blur="goBottom()" ng-keypress="goBottom()" id="email" name="email" ng-model="contact.email" type="email" ng-pattern="/^[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+.[a-z0-9-]/" autocomplete="off" required>
+          <div ng-messages="contactForm.email.$error" ng-if='contactForm.email.$dirty'>
+            <div ng-message="required">This is required.</div>
+            <div ng-message="email">Invalid Email Address</div>
+          </div>
         </md-input-container>
         <!-- message -->
         <md-input-container flex>
           <label>Message</label>
-          <textarea ng-blur="" id="msg" columns="1"></textarea>
+          <textarea ng-blur="goBottom()" ng-keypress="goBottom()" id="msg" columns="1"  name="msg" ng-model="contact.msg" required></textarea>
+          <div ng-messages="contactForm.msg.$error" ng-if='contactForm.msg.$dirty'>
+            <div ng-message="required">This is required.</div>
+          </div>
         </md-input-container>
-        <md-button id="submit" class="md-raised md-primary" ng-submit="">Send Message</md-button>
-          <md-button id="success" class="md-raised md-primary" ng-disabled>Message Sent!</md-button>
+        <md-button id="submit" class="md-raised md-primary" type="submit" ng-disabled="contactForm.$invalid">Send Message</md-button>
+          <md-button id="success" class="md-raised md-primary" ng-disabled="true">Message Sent!<i class="material-icons">check</i></md-button>
+          <md-button id="newMsg" class="md-raised md-accent">New Message<i class="material-icons">message</i></md-button>
         </form>
       </div>
     </div>
