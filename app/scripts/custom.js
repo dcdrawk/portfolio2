@@ -1,5 +1,5 @@
 'use strict';
-/* jshint ignore:start */
+
 $( document ).ready(function() {
 
   //my method for sending emails from the angular form
@@ -27,6 +27,7 @@ $( document ).ready(function() {
     var msg = document.getElementById('msg');
     
     $('#submit').click(function(){
+      console.log('Send Mail!');
       successBtn.style.display = 'inline-block';
       subBtn.style.display = 'none';
       name.disabled = true;
@@ -37,4 +38,3 @@ $( document ).ready(function() {
   }, 100);
   
 });
-/* jshint ignore:end */

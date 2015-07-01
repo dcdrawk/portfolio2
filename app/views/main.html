@@ -34,7 +34,7 @@
   <div class="wrapper">
     <div layout="row" ng-controller="gridListDemoCtrl" id="projectList" layout-wrap>
       <div layout="column" flex="25" class="project-container" ng-repeat="project in projects" flex-lg="50" flex-md="50" flex-sm="100">
-        <div angular-ripple ng-click="go(project.id);" id="{{project.id}}" class="project-tile md-whiteframe-z1">
+        <div angular-ripple ng-click="go(project.id);" id="{{project.id}}" class="project-tile md-whiteframe-z1" analytics-on="click" analytics-event="Project">
           <div>
             <h3>{{project.title}}<br><span class="subtitle">{{project.subtitle}}</span></h3>
             <h4></h4>
