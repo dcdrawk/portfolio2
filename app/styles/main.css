@@ -120,6 +120,9 @@ body.ng-scope{height:100%;}
   .wrapper{
     width:90%;
   }
+  .youtubeContainer{
+    margin-left: 0px!important;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -138,6 +141,7 @@ body.ng-scope{height:100%;}
   .jumbotron {
     border-bottom: 0;
   }
+  
 }
 @media screen and (max-width: 600px) {
   #devinPic {
@@ -155,8 +159,10 @@ body.ng-scope{height:100%;}
     -webkit-flex: 0 0 100%!important;
     flex: 0 0 100%!important;
   }
+/*
   .view-animate.ng-enter, .view-animate.ng-leave {
-    -webkit-transition:all  cubic-bezier(0.215, 0.61, 0.355, 1) 1s, opacity cubic-bezier(0.215, 0.61, 0.355, 1) .5s!important;
-    transition:all  cubic-bezier(0.215, 0.61, 0.355, 1) 1s, opacity cubic-bezier(0.215, 0.61, 0.355, 1) .5s!important;
+    -webkit-transition:all cubic-bezier(0.215, 0.61, 0.355, 1) 1s, opacity cubic-bezier(0.215, 0.61, 0.355, 1) .5s!important;
+    transition:all cubic-bezier(0.215, 0.61, 0.355, 1) 1s, opacity cubic-bezier(0.215, 0.61, 0.355, 1) .5s!important;
   }
+*/
 }
