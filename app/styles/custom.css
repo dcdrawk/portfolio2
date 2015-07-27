@@ -592,8 +592,14 @@ a.md-button.md-default-theme.md-primary.md-raised:hover{
   font-size:22px;
   color:#fff;
 }
-.imgGallery img{
+.main-img{
   width:100%;
+}
+.imgGallery{
+  overflow:hidden;
+}
+.imgGallery ul{
+  overflow:visible;
 }
 .project-tile{
   height: 200px;
@@ -602,6 +608,18 @@ a.md-button.md-default-theme.md-primary.md-raised:hover{
 .project-tile .subtitle{
   font-weight:400;
 }
+.unselectable, .layer img {
+    /* For Opera and <= IE9, we need to add unselectable="on" attribute onto each element */
+    /* Check this site for more details: http://help.dottoro.com/lhwdpnva.php */
+    -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+    -webkit-user-select: none;
+    -ms-user-select: none; /* From IE10 only */
+    user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+    -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+    user-drag: none;
+}
+
 /* ANGULAR RIPPLE */
  [angular-ripple] {
     position: relative;
@@ -624,6 +642,13 @@ a.md-button.md-default-theme.md-primary.md-raised:hover{
     }
   }
 /* /ANGULAR RIPPLE */
+
+
+/* ANGULAR GALLERY */
+.ng-gallery-content > a.close-popup{
+  top: 80px;
+}
+/* /ANGULAR GALLERY */
 @media screen and (max-width: 1000px) {
   #websiteList .project-container:nth-child(1) {
     max-width: 100%!important;

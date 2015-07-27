@@ -130,7 +130,9 @@ angular.module('yoApp')
       $rootScope.showProjTitle = true;  
       $rootScope.opened = false;
       $scope.opened = false;
-      $scope.opening = true;  
+      $scope.opening = true;
+      $scope.gallery =  [{thumb: 'images/thumbs/1.jpg', img: 'images/websites/esebc1.jpg', description: 'Image 1'},
+                        {thumb: 'images/thumbs/2.jpg', img: 'images/websites/epilepsy_old_home.jpg', description: 'Image 2'}];  
       $timeout(function() {
         $scope.opening = false;
         $scope.opened = true;

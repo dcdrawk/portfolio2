@@ -23,7 +23,8 @@ angular
     'oblador.lazytube',
     'angularRipple',
     'angulartics',
-    'angulartics.google.analytics'
+    'angulartics.google.analytics',
+    'jkuri.gallery'
   ])
   .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
